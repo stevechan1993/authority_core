@@ -2,6 +2,9 @@ package com.steve.authority.core.service;
 
 import java.util.List;
 
+import com.steve.authority.core.page.PageRequest;
+import com.steve.authority.core.page.PageResult;
+
 public interface CurdService<T> {
     /**
      * 保存操作
@@ -30,5 +33,11 @@ public interface CurdService<T> {
      */
     T findById(Long id);
 
-//    PageResult findPage(PageRequest pageRequest);
+    /**
+     * 分页查询
+     * @param pageRequest
+     * @return PageResult
+     */
+    PageResult findPage(PageRequest pageRequest);
+
 }
